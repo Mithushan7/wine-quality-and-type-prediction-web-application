@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine prediction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-dark text-light">
+    <div class="container-fluid text-center" style="height: 100vh; background-image: url('{{ url_for('static', filename='image/wine.jpg') }}'); background-size: cover;">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div>
+                <h1 class="display-4"style="font-weight: 400;">Welcome to the Wine Quality and Type Prediction Web App</h1>
+                <p class="lead"style="font-weight: 250;">Discover the quality and type of the wine</p>
+                <p class="lead" style="font-weight: 250;">Click the Make prediction button to make prediction</p>
+                <a href="{{ url_for('predict') }}" class="btn btn-lg btn-primary">Make Prediction</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

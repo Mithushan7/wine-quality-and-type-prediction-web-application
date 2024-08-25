@@ -1,0 +1,24 @@
+body {
+    background-color: #f8f9fa; /* light background for prediction page */
+}
+
+.card {
+    margin-top: 20px;
+    background-color: #007bff; /* blue background for cards */
+    color: white; /* white text */
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}

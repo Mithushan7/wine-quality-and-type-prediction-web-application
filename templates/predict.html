@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality and Type Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light"> 
+    <div class="container mt-5">
+        <h2 class="text-center">Predict Wine Quality and Type</h2>
+        <h3 class="text-center"style="font-weight:100;">Please enter the wine's physicochemical properties</h3>
+        <form action="/predict" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="feature1">Fixed Acidity:</label>
+                    <input type="text" class="form-control" name="fixed acidity" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="feature2">Volatile Acidity:</label>
+                    <input type="text" class="form-control" name="volatile acidity" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="feature3">Citric Acid:</label>
+                    <input type="text" class="form-control" name="citric acid" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="feature4">Residual Sugar:</label>
+                    <input type="text" class="form-control" name="residual sugar" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="feature5">Chlorides:</label>
+                    <input type="text" class="form-control" name="chlorides" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="feature6">Free Sulfur Dioxide:</label>
+                    <input type="text" class="form-control" name="free Sulfur Dioxide" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="feature5">Total Sulfur Dioxide:</label>
+                    <input type="text" class="form-control" name="total sulfur dioxide" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="feature6">Density:</label>
+                    <input type="text" class="form-control" name="density" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="feature5">pH:</label>
+                    <input type="text" class="form-control" name="pH" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="feature6">Sulphates:</label>
+                    <input type="text" class="form-control" name="sulphates" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="feature5">Alcohol:</label>
+                    <input type="text" class="form-control" name="alcohol" required>
+                </div>
+                
+            </div>
+            <!-- Add more input fields as necessary -->
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+        {% if quality %}
+            <div class="alert alert-info mt-3 text-center">
+                <h3>Predicted wine quality: {{ quality }} : {{wine_quality}}</h3>
+                <h3>Classified Wine type: {{ wine_type }}</h3>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
